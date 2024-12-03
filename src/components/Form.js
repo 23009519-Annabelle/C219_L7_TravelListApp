@@ -7,7 +7,9 @@ export default function Form({ addItem }) {
   
     function handleSubmit(e) {
       e.preventDefault();
-  
+
+      if(!description.trim()) return;
+      
       const newItem = {
         id: Date.now(),
         description,
